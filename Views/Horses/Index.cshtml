@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Project_s7.Models.Horses>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Horses book 🐴</h1>
+
+<!-- Search bar -->
+<div class="form-group">
+    <input type="text" class="form-control mb-3" id="searchInput" onkeyup="searchTable()" placeholder="Search for horses...">
+    <a asp-action="Create" class="add-horse-btn text-white">Add new horse +</a>
+</div>
+
+<table class="table mt-3" id="horsesTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HorseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HorseType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HorseDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HorsePrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HorsePictureLink)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int rowCount = 0;
+        }
+
+        @foreach (var item in Model)
+        {
+            var rowClass = rowCount % 2 == 0 ? "row-white" : "row-black";
+            <tr class="@rowClass rounded">
+                <td>
+                    @Html.DisplayFor(modelItem => item.HorseName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HorseType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HorseDescription)
+                </td>
+                <td>
+                    $@Html.DisplayFor(modelItem => item.HorsePrice) K
+                </td>
+                <td>
+                    <img class="Imgsize rounded border shadow-lg" src=@Html.DisplayFor(modelItem => item.HorsePictureLink) />
+                </td>
+                <td>
+                    <a class="btn text-white px-4 mb-4 EditBtn" asp-action="Edit" asp-route-id="@item.Id">Edit 🛠️</a>
+                    <a class="btn text-white px-4 mb-4 DetailBtn" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn text-white px-4 mb-4 DeleteBtn" asp-action="Delete" asp-route-id="@item.Id">Delete -</a>
+
+                </td>
+            </tr>
+            rowCount++;
+        }
+    </tbody>
+</table>
+<div class="space2"></div>
+
+@section Scripts {
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("horsesTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) { // start at 1 to skip the header row
+                td = tr[i].getElementsByTagName("td")[0]; // change the index if you want to search in another column
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+}

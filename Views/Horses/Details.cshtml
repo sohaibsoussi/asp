@@ -1,0 +1,52 @@
+﻿@model Project_s7.Models.Horses
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="mb-2">Horse details 🐴</h1>
+
+<div class="row">
+    <!-- Image Column -->
+    <div class="col-md-4">
+        <img class="img-fluid rounded border shadow-lg" src="@Model.HorsePictureLink" alt="Horse Image" />
+    </div>
+
+    <!-- Details Column -->
+    <div class="col-md-8">
+        <h4>Horse data</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.HorseName)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.HorseName)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.HorseType)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.HorseType)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.HorseDescription)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.HorseDescription)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.HorsePrice)
+            </dt>
+            <dd class="col-sm-8">
+                $@Html.DisplayFor(model => model.HorsePrice)k
+            </dd>
+        </dl>
+        <div>
+            <a class="btn btn-primary text-white px-4 mb-4" asp-action="Edit" asp-route-id="@Model?.Id">Edit 🛠️</a>
+            <a class="btn btn-success text-white px-4 mb-4" asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</div>
+
+

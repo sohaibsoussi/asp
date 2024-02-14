@@ -1,0 +1,113 @@
+﻿@using Microsoft.AspNetCore.Identity;
+
+@inject SignInManager<IdentityUser> SignInManager;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+<main>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 rounded text-center bg-body-tertiary background-image1">
+        <div class="black-filter"></div>
+        <div class="col-md-10 p-lg-5 mx-auto my-1 content">
+            <h1 class="display-6 fw-normal">Equine Marketplace</h1>
+            <p class="lead fw-normal">Discover premium horses for sale and find the perfect match for your riding ambitions. Whether buying or selling, our platform offers a trusted community for all equine enthusiasts.</p>
+
+                @if (SignInManager.IsSignedIn(User)){
+                    <a class="btn btn-outline-secondary" asp-area="" asp-controller="Horses" asp-action="Index">Horses</a>
+                }else{
+                    <a class="btn btn-outline-secondary" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                }
+        </div>
+    </div>
+
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+            <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">Equestrian Excellence</h2>
+                    <p class="lead">Discover the grace and power of our equine partners.</p>
+                </div>
+                <div class="horse-image1"></div>
+            </div>
+            <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Equine Adventures</h2>
+                    <p class="lead">Join us for a journey into the world of majestic horses.</p>
+                </div>
+                <div class="horse-image2"></div>
+            </div>
+        </div>
+
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+            <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">Stable Success</h2>
+                    <p class="lead">Building a legacy of champion horses, one foal at a time.</p>
+                </div>
+                <div class="horse-image3"></div>
+            </div>
+            <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Galloping Glory</h2>
+                    <p class="lead">Embrace the thrill of the race with our elite breeds.</p>
+                </div>
+                <div class="horse-image4"></div>
+            </div>
+        </div>
+
+        <div class="position-relative overflow-hidden rounded text-center bg-body-tertiary background-image2 marge-top">
+            <div class="black-filter"></div>
+            <div class="col-md-10 p-lg-5 mx-auto my-1 content">
+                <h1 class="display-6 fw-normal">Galloping Galleries</h1>
+                <p class="lead fw-normal">Step into the arena of excellence with our handpicked collection of horses. Connect with sellers, engage with our horse-loving community, and ride away with a steed that meets your highest expectations.</p>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <a class="btn btn-outline-secondary" asp-area="" asp-controller="Horses" asp-action="Index">Horses</a>
+                }
+                else
+                {
+                    <a class="btn btn-outline-secondary" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                }
+            </div>
+        </div>
+
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+            <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">Mane Attractions</h2>
+                    <p class="lead">Experience the beauty and intelligence of our curated horse collection.</p>
+                </div>
+                <div class="horse-image5"></div>
+            </div>
+            <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Hoofbeat Horizons</h2>
+                    <p class="lead">Explore new trails and adventures with our reliable equine companions.</p>
+                </div>
+                <div class="horse-image6"></div>
+            </div>
+        </div>
+
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 mb-5">
+            <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">Canter Chronicles</h2>
+                    <p class="lead">Celebrating the journey of equine athleticism and grace at stride.</p>
+                </div>
+                <div class="horse-image7"></div>
+            </div>
+            <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Trotter's Tales</h2>
+                    <p class="lead">Discover the untold stories behind our horses' journey to excellence.</p>
+                </div>
+                <div class="horse-image8"></div>
+            </div>
+        </div>
+        <div class="space1">
+            
+        </div>
+</main>
+</div>

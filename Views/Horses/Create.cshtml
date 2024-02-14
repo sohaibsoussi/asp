@@ -1,0 +1,61 @@
+﻿@model Project_s7.Models.Horses
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Add Horse 🐴</h1>
+<hr />
+<div class="row">
+    <div class="col-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Row 1 for HorseName and HorseType -->
+            <div class="row mb-4">
+                <div class="col-md-6 col-12 form-group">
+                    <label asp-for="HorseName" class="control-label mb-2">Horse name</label>
+                    <input asp-for="HorseName" class="form-control" />
+                    <span asp-validation-for="HorseName" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 col-12 form-group">
+                    <label asp-for="HorseType" class="control-label mb-2">Horse type</label>
+                    <input asp-for="HorseType" class="form-control" />
+                    <span asp-validation-for="HorseType" class="text-danger"></span>
+                </div>
+            </div>
+
+            <!-- Row 2 for HorseDescription and HorsePrice -->
+            <div class="row  mb-4">
+                <div class="col-md-6 col-12 form-group">
+                    <label asp-for="HorseDescription" class="control-label my-2">Description</label>
+                    <input asp-for="HorseDescription" class="form-control" />
+                    <span asp-validation-for="HorseDescription" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 col-12 form-group">
+                    <label asp-for="HorsePrice" class="control-label my-2">Price</label>
+                    <input asp-for="HorsePrice" class="form-control" />
+                    <span asp-validation-for="HorsePrice" class="text-danger"></span>
+                </div>
+            </div>
+
+            <!-- Single input for HorsePictureLink -->
+            <div class="row">
+                <div class="col-12 form-group">
+                    <label asp-for="HorsePictureLink" class="control-label my-2">Picture link</label>
+                    <input asp-for="HorsePictureLink" class="form-control" />
+                    <span asp-validation-for="HorsePictureLink" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group mt-4">
+                <input type="submit" value="Add New Horse 🥳" class="btn btn-primary" />
+                <a asp-action="Index" class="btn DetailBtn text-white">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

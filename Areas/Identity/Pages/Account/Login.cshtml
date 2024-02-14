@@ -1,0 +1,63 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<div class="background-image"></div>
+<div class="overlay"></div>
+
+<div class="form-container m-auto">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="mb-4 text-center text-black">@ViewData["Title"]</h1>
+            <form id="account" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" placeholder="name@example.com" autocomplete="username" aria-required="true" />
+                    <label asp-for="Input.Email">Email</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control" placeholder="Password" autocomplete="current-password" aria-required="true" />
+                    <label asp-for="Input.Password">Password</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" asp-for="Input.RememberMe" id="rememberMeCheck"/>
+                        <label class="form-check-label" asp-for="Input.RememberMe">
+                            Remember me
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="d-grid gap-2 mb-3">
+                    <button id="login-submit" type="submit" class="btn btn-lg btn-primary">Log in</button>
+                </div>
+                
+<div class="container">
+    <div class="row text-center">
+        <div class="col">
+            <p><a id="forgot-password" asp-page="./ForgotPassword" class="text-black-50">Forgot your password?</a></p>
+        </div>
+        <div class="col">
+            <p><a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="text-black-50">Register as a new user</a></p>
+        </div>
+        <div class="col">
+            <p><a id="resend-confirmation" asp-page="./ResendEmailConfirmation" class="text-black-50">Resend email confirmation</a></p>
+        </div>
+    </div>
+</div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

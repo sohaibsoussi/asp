@@ -1,0 +1,374 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+.logo{
+    height:50px;
+    width:50px;
+    object-fit:cover;
+}
+a{
+    text-decoration: none;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+.btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+}
+
+.bd-mode-toggle {
+    z-index: 1500;
+}
+
+.container {
+  max-width: 960px;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #8e8e8e;
+  transition: color .15s ease-in-out;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
+.background-image1 {
+    /* Use the image URL as the background */
+    background-image: url('/Assets/sohaibhorse.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.marge-top{
+    margin-top:100px;
+}
+.background-image2 {
+    /* Use the image URL as the background */
+    background-image: url('https://images.unsplash.com/photo-1553284966-19b8815c7817?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+}
+
+.black-filter {
+    /* Create a black filter effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    z-index: 1;
+}
+
+.content {
+    /* Position the content above the filter and change text color to white */
+    position: relative;
+    z-index: 2;
+    color: white; /* Make the text color white */
+}
+
+.btn-outline-secondary {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-secondary:hover {
+    background-color: white;
+    color: black;
+}
+.horse-image1 {
+    /* Use the image URL as the background */
+    background-image: url('https://images.unsplash.com/photo-1598974357801-cbca100e65d3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9yc2V8ZW58MHwxfDB8fHww');
+    background-size: cover;
+    background-position: center;
+    width: 90%; /* Width of the image container */
+    height: 400px; /* Height of the image container */
+    border-radius: 21px 21px 21px 21px; /* Border radius for rounded corners */
+    margin: auto; /* Center the image container */
+}
+.horse-image2 {
+    /* Use the image URL as the background */
+    background-image: url('https://images.unsplash.com/photo-1602253739230-b0a32206f8d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGhvcnNlfGVufDB8MXwwfHx8MA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    width: 90%; /* Width of the image container */
+    height: 400px; /* Height of the image container */
+    border-radius: 21px 21px 21px 21px; /* Border radius for rounded corners */
+    margin: auto; /* Center the image container */
+}
+.horse-image3 {
+    /* Use the image URL as the background */
+    background-image: url('https://images.unsplash.com/photo-1573751055635-a0ad5937fd37?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGhvcnNlfGVufDB8MXwwfHx8MA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    width: 90%; /* Width of the image container */
+    height: 400px; /* Height of the image container */
+    border-radius: 21px 21px 21px 21px; /* Border radius for rounded corners */
+    margin: auto; /* Center the image container */
+}
+.horse-image4 {
+    /* Use the image URL as the background */
+    background-image: url('https://images.unsplash.com/photo-1576183448756-b50211a9f079?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG9yc2V8ZW58MHwxfDB8fHww');
+    background-size: cover;
+    background-position: center;
+    width: 90%; /* Width of the image container */
+    height: 400px; /* Height of the image container */
+    border-radius: 21px 21px 21px 21px; /* Border radius for rounded corners */
+    margin: auto; /* Center the image container */
+}
+.horse-image5 {
+    /* Use the image URL as the background */
+    background-image: url('https://images.unsplash.com/photo-1599053581540-248ea75b59cb?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    width: 90%; /* Width of the image container */
+    height: 400px; /* Height of the image container */
+    border-radius: 21px 21px 21px 21px; /* Border radius for rounded corners */
+    margin: auto; /* Center the image container */
+}
+
+
+.horse-image6 {
+    /* Use the image URL as the background */
+    background-image: url('https://images.unsplash.com/photo-1593179449458-e0d43d512551?q=80&w=1882&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    width: 90%; /* Width of the image container */
+    height: 400px; /* Height of the image container */
+    border-radius: 21px 21px 21px 21px; /* Border radius for rounded corners */
+    margin: auto; /* Center the image container */
+}
+
+.horse-image7 {
+    /* Use the image URL as the background */
+    background-image: url('https://images.unsplash.com/photo-1566824441291-90e3893b187f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTg0fHxob3JzZXxlbnwwfDF8MHx8fDA%3D');
+    background-size: cover;
+    background-position: center;
+    width: 90%; /* Width of the image container */
+    height: 400px; /* Height of the image container */
+    border-radius: 21px 21px 21px 21px; /* Border radius for rounded corners */
+    margin: auto; /* Center the image container */
+}
+
+.horse-image8 {
+    /* Use the image URL as the background */
+    background-image: url('https://images.unsplash.com/photo-1548670385-de3e9a053ad2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk5fHxob3JzZXxlbnwwfDF8MHx8fDA%3D');
+    background-size: cover;
+    background-position: center;
+    width: 90%; /* Width of the image container */
+    height: 400px; /* Height of the image container */
+    border-radius: 21px 21px 21px 21px; /* Border radius for rounded corners */
+    margin: auto; /* Center the image container */
+}
+
+.space1{
+    background-color:white;
+    height:200px;
+}
+
+.space2 {
+    background-color: white;
+    height: 300px;
+}
+
+.Imgsize{
+    height: 50%;
+    width: 100%;
+}
+
+.ImgDetail {
+    height: 100%;
+    width: 100%;
+}
+.EditBtn {
+    background-color: #1f6f78;
+}
+.DetailBtn {
+    background-color: #2a9d8f;
+}
+.DeleteBtn {
+    background-color: #e76f51;
+}
+.row-black {
+    background-color: darkslategray;
+    color: white;
+}
+
+.row-white {
+    background-color: white;
+    color: black;
+}
+
+.add-horse-btn {
+    background-color: #2a9d8f; /* Teal color to match the 'Details' button from the UI */
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.add-horse-btn:hover {
+    background-color: #21867a; /* A slightly darker teal for hover effect */
+    text-decoration: none; /* Prevents the underline on hover */
+}
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url('/Assets/sohaibhorse.jpeg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    z-index: -1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    z-index: 2;
+}
+.z-index-max{
+    z-index:100;
+}
